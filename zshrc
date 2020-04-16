@@ -244,4 +244,4 @@ eval "$(jenv init -)"
 
 export TERM="xterm-256color"
 
-
+export PATH="/usr/local/Cellar/redis/5.0.7/bin:$PATH"
