@@ -81,6 +81,7 @@ plugins=(
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -259,4 +260,14 @@ fzfp() {
 fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (rougify {}  || highlight -O ansi -l {} || coderay {} || cat {}) 2> /dev/null | head -500'
 alias tt='fzf --preview '"'"'[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (rougify {}  || highlight -O ansi -l {} || coderay {} || cat {}) 2> /dev/null | head -500'"'"
 }
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+
 
