@@ -269,5 +269,7 @@ if [ $commands[kubectl] ]; then
 fi
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
+# gitignore command api
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 
 
