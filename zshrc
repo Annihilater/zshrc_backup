@@ -156,6 +156,9 @@ alias bres="brew services restart"
 #function stop() { ps aux | grep -v grep | grep $@ && brew services stop $@  && ps aux | grep -v grep | grep $@ ;}
 #function restart() { ps aux | grep -v grep | grep $@ && brew services restart $@ && ps aux | grep -v grep | grep $@;}
 
+# echo
+#alias echo='echo "\033[32$1\033[0m"'
+
 # https://github.com/skywind3000/asynctasks.vim
 alias task="asynctask -f"
 # task 绑定到 F5 键
@@ -273,3 +276,4 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 
 
+export PATH="/usr/local/opt/node@12/bin:$PATH"
